@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >  
+<mapper namespace="com.spring.boot.user.mapper.UserMapper" >
+      
+    <insert id="insert" parameterType="User">  
+        insert into sys_user(name,login_name,password)
+        values(#{name},#{loginName},#{password})
+    </insert>  
+      
+    <select id="selectById" resultType="User">
+        select id, name, login_name as loginName, password from sys_user where id = #{id}
+    </select>  
+      
+    <update id="updateById" parameterType="User">  
+        update sys_user set    
+	        name = #{name} ,
+            login_name = #{loginName} ,
+	        password = #{password} 
+        where id = #{id}  
+    </update>  
+      
+    <delete id="deleteById">  
+        delete from sys_user where id = #{id}  
+    </delete>  
+      
+    <select id="queryAll" resultType="User">  
+        select id, name, login_name as loginName, password from sys_user
+    </select>  
+      
+</mapper> 
