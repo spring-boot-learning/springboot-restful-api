@@ -15,7 +15,7 @@
         <spring.boot.version>2.1.8.RELEASE</spring.boot.version>
         <maven.version>3.8.1</maven.version>
         <mybatis.spring.version>2.1.0</mybatis.spring.version>
-        <mysql.connector.version>8.0.11</mysql.connector.version>
+        <mysql.connector.version>8.0.16</mysql.connector.version>
     </properties>
 
     <dependencies>
